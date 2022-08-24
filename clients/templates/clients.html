@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page %}
+
+    {% for letter in clients_lisst %}
+        <div>
+            {{ letter.name }}
+            {% if letter.photo %}
+                <img src="{{letter.photo.url}}">
+            {% endif %}
+        </div>
+    <hr>
+
+    {%endfor%}
+
+{%endblock%}
+
