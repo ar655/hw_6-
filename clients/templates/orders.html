@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block page %}
+    <h1>страница заказов</h1>
+    {% for letter in orders_lisst%}
+
+        <div>
+            <div>заказ</div>
+            <a href="/orders/{{letter.id}}/">{{letter.name}}</a><br/>
+            <a href="/orders/{{letter.id}}/">{{letter.contacts}}</a><br/>
+            <a href="/orders/{{letter.id}}/">{{letter.discription}}</a><br/>
+
+        </div>
+    <hr>
+
+    {%endfor%}
+
+{%endblock%}
+

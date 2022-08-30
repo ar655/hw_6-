@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page %}
+    <h1> информация о заказе </h1>
+
+    <div>имя заказчика: {{order.name}}</div>
+    <div>контакты заказчика: {{order.contacts}}</div>
+    <div>описание заказа:
+        {% if order.discription %}
+           {{order.discription}}
+        {% else %}
+          <span>нет описания </span>
+        {% endif %}
+    </div>
+
+
+{% endblock %}
