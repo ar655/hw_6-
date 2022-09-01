@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block page %}
 
-    {% for letter in clients_lisst %}
+    {% for client in object_list %}
         <div>
-            {{ letter.name }}
-            {% if letter.photo %}
-                <img src="{{letter.photo.url}}">
+            <a href="/client/{{client.id}}/">{{client.name}}</a>
+            {% if client.photo %}
+                <img src="{{client.photo.url}}">
             {% endif %}
         </div>
     <hr>

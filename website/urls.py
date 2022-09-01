@@ -23,11 +23,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('clients/',clients_list),
+    path('client/', ClientListView.as_view(), name='client-list'),
+    path('client/<int:pk>/', ClientInfoView.as_view(), name='client-detail'),
+    path('client/update/<int:pk>/', DataUpdate.as_view(), name='client-update'),
     path('about/',about ),
     path('orders/',orders_list,name='orders-list'),
-    path('orders/<int:id>/',orders_inffo,name='orders-info'),
-    path('orders/update/<int:id>/',orders_update,name='orders-update')
+    path('orders/<int:pk>/',OrderInfoView.as_view(),name='orders-info'),
+    path('orders/update/<int:id>/',orders_update,name='orders-update'),
+    path('text/',MyView.as_view())
 ]
 
 

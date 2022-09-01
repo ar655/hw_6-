@@ -2,11 +2,11 @@
 {% block page %}
     <h1> информация о заказе </h1>
 
-    <div>имя заказчика: {{order.name}}</div>
-    <div>контакты заказчика: {{order.contacts}}</div>
+    <div>имя заказчика: {{object.name}}</div>
+    <div>контакты заказчика: {{object.contacts}}</div>
     <div>описание заказа:
-        {% if order.discription %}
-           {{order.discription}}
+        {% if object.discription %}
+           {{object.discription}}
         {% else %}
           <span>нет описания </span>
         {% endif %}
